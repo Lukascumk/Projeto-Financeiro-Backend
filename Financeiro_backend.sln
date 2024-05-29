@@ -28,24 +28,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Imagens projeto", "Imagens projeto", "{E92745EB-2D27-43DB-BA39-51200CB75860}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 110944.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 110944.png
-		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 111047.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 111047.png
-		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 111138.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 111138.png
-		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 111157.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 111157.png
-		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 121133.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 121133.png
-		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 121303.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 121303.png
-		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 121911.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 121911.png
-		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122214.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122214.png
-		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122225.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122225.png
-		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122233.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122233.png
-		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122259.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122259.png
-		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122922.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122922.png
-		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 131127.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 131127.png
-		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 134534.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 134534.png
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
