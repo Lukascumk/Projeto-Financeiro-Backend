@@ -33,7 +33,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\lukas\\OneDrive\\Área de Trabalho\\Projetos Back End\\Projeto financeiro backend\\Financeiro_backend\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\lukas\\OneDrive\\Área de Trabalho\\Projetos Back End\\Projeto financeiro backend\\Financeiro_backend\\Entities\\Entities.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
