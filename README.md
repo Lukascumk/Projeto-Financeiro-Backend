@@ -21,12 +21,12 @@ O Projeto utiliza dotnet, assim como a criação de classes e interfaces para o 
 Realização de querys e toda parte que engloba o desenvolvimento back-end. 
 
 # Tecnilogias
-<P>
-DDD (Arquitetura)
-Identity (Gerenciamento de usuario)
-Linq C# para querys
-Generics 
-CORS (Compartilhamento de recursos com origem diferentes)
-JWT (Json Web Token/API autenticadas ) 
-Dependency injecton (singleton)
-JWT 
+
+<ul>DDD (Arquitetura)
+<ul>Identity (Gerenciamento de usuario)
+<ul>Linq C# para querys
+<ul>Generics 
+<ul>CORS (Compartilhamento de recursos com origem diferentes)
+<ul>JWT (Json Web Token/API autenticadas ) 
+<ul>Dependency injecton (singleton)
+<ul>JWT 
