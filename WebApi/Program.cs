@@ -30,6 +30,9 @@ builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ContextBase>();
 
+        
+
+
 
 //INTERFACE E REPOSITORIO
 

@@ -41,16 +41,41 @@ namespace Infra.Configuracao
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<ApplicationUser>().ToTable("AspNetUsers").HasKey(t => t.Id);
-            
+
+
+            // Configuração das propriedades DateTime da entidade Despesa
+            builder.Entity<Despesa>(entity =>
+            {
+                entity.Property(e => e.DataCadastro)
+                .HasColumnType("datetime")
+                .IsRequired();
+
+                entity.Property(e => e.DataAlteracao)
+                 .HasColumnType("datetime")
+                 .IsRequired();
+
+                entity.Property(e => e.DataPagamento)
+                 .HasColumnType("datetime")
+                 .IsRequired();
+
+                entity.Property(e => e.DataVencimento)
+                 .HasColumnType("datetime")
+                 .IsRequired();
+            });
+
+
+            // Configuração das propriedades DateTime da entidade despesa
+
+
             base.OnModelCreating(builder);
         }
 
         public string ObterStringConexao()
         {
-            return "Data Source=MySQL-8.0.36; Initial Catalog=Financeiro_2024; Integrated Security=False; User ID=root; Password=1234;";
+            return "server=localhost;initial catalog=Financeiro_2024;uid=root;pwd=1234";
 
         }
-
+        
 
     }
 }

@@ -14,7 +14,6 @@ namespace WebApi.Token
         private int expiryInMinutes = 5;
 
 
-
         public TokenJWTBuilder AddSecurityKey(SecurityKey securityKey)
         {
             this.securityKey = securityKey;
@@ -38,6 +37,7 @@ namespace WebApi.Token
             this.audience = audience;
             return this;
         }
+
         public TokenJWTBuilder AddClaim(string type, string value)
         {
             this.claims.Add(type, value);
