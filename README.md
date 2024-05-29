@@ -1,34 +1,25 @@
 # Projeto-Financeiro-Backend
 
-Projeto financeiro utilizando conceito de arquitetura "DDD".
+O **Projeto-Financeiro-Backend** é uma aplicação robusta e versátil, desenvolvida com o objetivo de auxiliar na organização financeira tanto em ambientes profissionais quanto familiares. Utilizando a linguagem C# e o ambiente de desenvolvimento Visual Studio 2022, este projeto incorpora o conceito de arquitetura DDD (Domain-Driven Design), proporcionando um design orientado ao domínio que resulta em um código mais limpo e manutenível.
 
-Criação de pastas do projeto em portugues e classes em inglês simulando ambiente de desenvolvimento onde geralmente
-ou utilizamos toda a criação em inglês ou toda em português.
+## Sobre o Projeto
 
-O Projeto é feito em c#, utilizando o visual Studio 20222. 
-Utilizando o conceito Code First, onde primeiro vamos ao código, para atravez dele iniciarmos o migration para o database, através do ORM.
+Este projeto foi desenvolvido utilizando o conceito Code First, que permite a criação do banco de dados a partir do código, através do ORM (Object-Relational Mapping). O banco de dados utilizado é o MySQL, conhecido pela sua eficiência e confiabilidade.
 
-Utilizei o database MySql. 
+A aplicação conta com a criação de uma API e a configuração de Token no Json, garantindo a segurança e a integridade dos dados. Além disso, foi implementado um CRUD (Create, Read, Update, Delete), permitindo a manipulação completa dos dados.
 
-O Projeto conta com criação de API e configuração de Token no Json. 
+O Projeto-Financeiro-Backend é ideal para qualquer pessoa ou empresa que deseja ter um maior controle sobre suas finanças. Com ele, é possível organizar e gerenciar suas finanças de maneira eficiente e intuitiva.
 
-Criação de CRUD.
+## Tecnologias Utilizadas
 
-O Projeto é um projeto de serviço financeiro, onde podemos realizar a organização de nossas finanças.
-Seja no ambiente profissional, onde pode ser utilizado por empresas; seja no ambiente familiar, onde pode ser utilizado por pessoas comuns, para a organização de suas finanças familiar. 
+O projeto utiliza várias tecnologias e conceitos avançados, incluindo:
 
-O Projeto utiliza dotnet, assim como a criação de classes e interfaces para o desenvolvimento do backend. 
-Realização de querys e toda parte que engloba o desenvolvimento back-end. 
+- **DDD (Domain-Driven Design)**: Uma abordagem de design orientada ao domínio que resulta em um código mais limpo e manutenível.
+- **Identity**: Um sistema de gerenciamento de usuários que permite autenticação e autorização de forma segura.
+- **Linq C# para querys**: Uma poderosa biblioteca de consulta de dados que permite a manipulação eficiente dos dados.
+- **Generics**: Permite a definição de classes, interfaces e métodos com parâmetros de tipo, proporcionando reutilização de código e eficiência.
+- **CORS (Cross-Origin Resource Sharing)**: Um mecanismo que permite muitos recursos (por exemplo, fontes, JavaScript) em uma página da web serem solicitados de outro domínio fora do domínio da qual a origem do recurso veio.
+- **JWT (Json Web Token)**: Um padrão (RFC 7519) que define uma maneira compacta e independente de transmitir informações de forma segura entre as partes como um objeto JSON.
+- **Dependency Injection**: Um padrão de design que permite a remoção de hard-coded dependencies e torna possível alterá-las, seja em tempo de execução ou compilação.
 
-# Tecnilogias
-
-<ul>
-<li>DDD (Arquitetura)</li>
-<li>Identity (Gerenciamento de usuario)</li>
-<li>Linq C# para querys</li>
-<li>Generics </li>
-<li>CORS (Compartilhamento de recursos com origem diferentes)</li>
-<li>JWT (Json Web Token/API autenticadas ) </li>
-<li>Dependency injecton (singleton)</li>
-</ul>
-
+Esperamos que você encontre valor neste projeto e estamos ansiosos para ver como ele pode ajudar a melhorar a sua gestão financeira!
