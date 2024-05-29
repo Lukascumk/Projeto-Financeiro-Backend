@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Servicos
 {
-    public class UsuarioSistemaFinanceiroServico : IUsuarioSistemaFinanceiroServico
+    public class UsuarioSistemaFinanceiroServico : IUsuarioSistemaFinanceiro    
     {
 
         private readonly InterfaceUsuarioSistemaFinanceiro _interfaceUsuarioSistemaFinanceiro;
@@ -17,8 +17,6 @@ namespace Domain.Servicos
         public UsuarioSistemaFinanceiroServico(InterfaceUsuarioSistemaFinanceiro interfaceUsuarioSistemaFinanceiro)
         {
             _interfaceUsuarioSistemaFinanceiro = interfaceUsuarioSistemaFinanceiro;
-        
-        
         }
 
         public async Task CadastrarUsuarioNoSistema(UsuarioSistemaFinanceiro usuarioSistemaFinanceiro)

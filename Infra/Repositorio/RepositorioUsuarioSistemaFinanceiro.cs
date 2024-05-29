@@ -56,5 +56,16 @@ namespace Infra.Repositorio
 
             }
         }
+
+        public async Task Add(UsuarioSistemaFinanceiro usuarioSistemaFinanceiro)
+        {
+            using (var banco = new ContextBase(_OptionsBuilder))
+            {
+                await banco.UsuarioSistemaFinaceiro.AddAsync(usuarioSistemaFinanceiro);
+                await banco.SaveChangesAsync();
+            }
+        }
     }
 }
+    
+

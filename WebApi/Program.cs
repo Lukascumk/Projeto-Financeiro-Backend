@@ -47,7 +47,7 @@ builder.Services.AddSingleton<InterfaceUsuarioSistemaFinanceiro, RepositorioUsua
 builder.Services.AddSingleton<ICategoriaServico, CategoriaServico>();
 builder.Services.AddSingleton<IDespesaServico, DespesaServico>();
 builder.Services.AddSingleton<ISistemaFinanceiroServico, SistemaFinanceiroServico>();
-builder.Services.AddSingleton<IUsuarioSistemaFinanceiroServico, UsuarioSistemaFinanceiroServico>();
+builder.Services.AddSingleton<IUsuarioSistemaFinanceiro, UsuarioSistemaFinanceiroServico>();
 
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
