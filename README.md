@@ -22,11 +22,13 @@ Realização de querys e toda parte que engloba o desenvolvimento back-end.
 
 # Tecnilogias
 
-<ul>DDD (Arquitetura)
-<ul>Identity (Gerenciamento de usuario)
-<ul>Linq C# para querys
-<ul>Generics 
-<ul>CORS (Compartilhamento de recursos com origem diferentes)
-<ul>JWT (Json Web Token/API autenticadas ) 
-<ul>Dependency injecton (singleton)
-<ul>JWT 
+<ul>
+<li>DDD (Arquitetura)</li>
+<li>Identity (Gerenciamento de usuario)</li>
+<li>Linq C# para querys</li>
+<li>Generics </li>
+<li>CORS (Compartilhamento de recursos com origem diferentes)</li>
+<li>JWT (Json Web Token/API autenticadas ) </li>
+<li>Dependency injecton (singleton)</li>
+</ul>
+
