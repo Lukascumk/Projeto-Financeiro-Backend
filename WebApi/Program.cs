@@ -9,8 +9,11 @@ using Entities.Entidades;
 using Infra.Configuracao;
 using Infra.Repositorio;
 using Infra.Repositorio.Generics;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using WebApi.Token;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +29,9 @@ builder.Services.AddDbContext<ContextBase>(options =>
 builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ContextBase>();
+
+        
+
 
 
 //INTERFACE E REPOSITORIO
@@ -44,6 +50,37 @@ builder.Services.AddSingleton<ISistemaFinanceiroServico, SistemaFinanceiroServic
 builder.Services.AddSingleton<IUsuarioSistemaFinanceiroServico, UsuarioSistemaFinanceiroServico>();
 
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+             .AddJwtBearer(option =>
+             {
+                 option.TokenValidationParameters = new TokenValidationParameters
+                 {
+                     ValidateIssuer = false,
+                     ValidateAudience = false,
+                     ValidateLifetime = true,
+                     ValidateIssuerSigningKey = true,
+
+                     ValidIssuer = "Teste.Securiry.Bearer",
+                     ValidAudience = "Teste.Securiry.Bearer",
+                     IssuerSigningKey = JwtSecurityKey.Create("Secret_Key-12345678")
+                 };
+
+                 option.Events = new JwtBearerEvents
+                 {
+                     OnAuthenticationFailed = context =>
+                     {
+                         Console.WriteLine("OnAuthenticationFailed: " + context.Exception.Message);
+                         return Task.CompletedTask;
+                     },
+                     OnTokenValidated = context =>
+                     {
+                         Console.WriteLine("OnTokenValidated: " + context.SecurityToken);
+                         return Task.CompletedTask;
+                     }
+                 };
+             });
+
+
 
 
 var app = builder.Build();
@@ -56,6 +93,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+//New
+app.UseAuthentication();
 
 app.UseAuthorization();
 
