@@ -20,7 +20,8 @@ Seja no ambiente profissional, onde pode ser utilizado por empresas; seja no amb
 O Projeto utiliza dotnet, assim como a criação de classes e interfaces para o desenvolvimento do backend. 
 Realização de querys e toda parte que engloba o desenvolvimento back-end. 
 
-#Tecnilogias
+# Tecnilogias
+<P>
 DDD (Arquitetura)
 Identity (Gerenciamento de usuario)
 Linq C# para querys
