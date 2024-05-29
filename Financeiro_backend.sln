@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{6AE6A6CC-00C9-4DD9-8882-1FAADF5260B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{6AE6A6CC-00C9-4DD9-8882-1FAADF5260B7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Apresentação", "1 - Apresentação", "{2FB63FB5-866A-40BD-9BF1-B88759E3BCB9}"
 EndProject
@@ -15,17 +15,35 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Entidades", "4 - Entida
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Helpers", "5 - Helpers", "{2B62D177-59B9-470A-87EA-7C97884384F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{B6953478-F326-45BD-8B14-4EC22BA24FC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helpers", "Helpers\Helpers.csproj", "{B6953478-F326-45BD-8B14-4EC22BA24FC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Infra\Infra.csproj", "{CC84F6CC-4D84-423F-90B0-1DF93C16988B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra", "Infra\Infra.csproj", "{CC84F6CC-4D84-423F-90B0-1DF93C16988B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{89DF223B-0C82-41FC-B37F-0F0701DD1260}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{89DF223B-0C82-41FC-B37F-0F0701DD1260}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{5C22916B-B398-4152-8270-1C2E5711E0C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{5C22916B-B398-4152-8270-1C2E5711E0C6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{6CF8DE4C-D73D-4EBE-972E-BB4194903902}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Imagens projeto", "Imagens projeto", "{E92745EB-2D27-43DB-BA39-51200CB75860}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 110944.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 110944.png
+		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 111047.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 111047.png
+		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 111138.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 111138.png
+		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 111157.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 111157.png
+		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 121133.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 121133.png
+		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 121303.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 121303.png
+		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 121911.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 121911.png
+		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122214.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122214.png
+		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122225.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122225.png
+		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122233.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122233.png
+		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122259.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122259.png
+		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122922.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 122922.png
+		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 131127.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 131127.png
+		..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 134534.png = ..\..\..\..\Imagens\Capturas de tela\back-end\Captura de tela 2024-05-29 134534.png
 	EndProjectSection
 EndProject
 Global
