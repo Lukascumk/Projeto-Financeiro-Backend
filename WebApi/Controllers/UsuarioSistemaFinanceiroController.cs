@@ -1,6 +1,5 @@
 ﻿using Domain.Interfaces.InterfaceServicos;
 using Domain.Interfaces.IUsuarioSistemaFinanceiro;
-using Domain.Servicos;
 using Entities.Entidades;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -14,9 +13,9 @@ namespace WebApi.Controllers
     public class UsuarioSistemaFinanceiroController : ControllerBase
     {
         private readonly InterfaceUsuarioSistemaFinanceiro _InterfaceUsuarioSistemaFinanceiro;
-        private readonly IUsuarioSistemaFinanceiro _IUsuarioSistemaFinanceiroServico;
+        private readonly IUsuarioSistemaFinanceiroServico _IUsuarioSistemaFinanceiroServico;
         public UsuarioSistemaFinanceiroController(InterfaceUsuarioSistemaFinanceiro InterfaceUsuarioSistemaFinanceiro,
-            IUsuarioSistemaFinanceiro IUsuarioSistemaFinanceiroServico)
+            IUsuarioSistemaFinanceiroServico IUsuarioSistemaFinanceiroServico)
         {
             _InterfaceUsuarioSistemaFinanceiro = InterfaceUsuarioSistemaFinanceiro;
             _IUsuarioSistemaFinanceiroServico = IUsuarioSistemaFinanceiroServico;
@@ -36,7 +35,7 @@ namespace WebApi.Controllers
         {
             try
             {
-                await _IUsuarioSistemaFinanceiroServico.CadastrarUsuarioNoSistema (
+                await _IUsuarioSistemaFinanceiroServico.CadastrarUsuarioNoSistema(
                    new UsuarioSistemaFinanceiro
                    {
                        IdSistema = idSistema,

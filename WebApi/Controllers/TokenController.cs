@@ -1,15 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Entities.Entidades;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using WebApi.Models;
 using WebApi.Token;
-using System;
-using System.Security.Cryptography;
-using System.Text;
-using System.IdentityModel.Tokens.Jwt;
-using System.Threading.Tasks;
-using Entities.Entidades;
-using Microsoft.AspNetCore.Authorization;
 
 namespace WebApi.Controllers
 {
@@ -19,8 +16,10 @@ namespace WebApi.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly string _securityKey = "your-very-secure-256-bit-secret-key-which-is-at-least-32-characters-long"; // Chave de 256 bits
 
-        public TokenController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        public TokenController(UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -33,31 +32,32 @@ namespace WebApi.Controllers
         {
             if (string.IsNullOrWhiteSpace(Input.Email) || string.IsNullOrWhiteSpace(Input.Password))
             {
-                return Unauthorized();
+                return Unauthorized(new { message = "Email or password is empty" });
             }
 
-            var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, false, lockoutOnFailure: false);
+            var user = await _userManager.FindByEmailAsync(Input.Email);
+            if (user == null)
+            {
+                return Unauthorized(new { message = "Invalid email or password" });
+            }
+
+            var result = await _signInManager.PasswordSignInAsync(user.UserName, Input.Password, false, lockoutOnFailure: false);
             if (result.Succeeded)
             {
-                var rng = new RNGCryptoServiceProvider();
-                var bytes = new byte[32];
-                rng.GetBytes(bytes);
-                var secretKey = Convert.ToBase64String(bytes);
-
                 var token = new TokenJWTBuilder()
-                    .AddSecurityKey(JwtSecurityKey.Create(secretKey))
-                    .AddSubject("Canal Dev Net Core")
+                    .AddSecurityKey(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_securityKey)))
+                    .AddSubject("Lukas_comK_Back_End")
                     .AddIssuer("Teste.Securiry.Bearer")
                     .AddAudience("Teste.Securiry.Bearer")
                     .AddClaim("UsuarioAPINumero", "1")
-                    .AddExpiry(5)
+                    .AddExpiry(30) // Expiração do token em 30 minutos
                     .Builder();
 
-                return Ok(token.Value);
+                return Ok(new { token = token.value });
             }
             else
             {
-                return Unauthorized();
+                return Unauthorized(new { message = "Invalid email or password" });
             }
         }
     }

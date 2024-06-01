@@ -13,6 +13,6 @@ namespace WebApi.Token
 
         public DateTime ValidTo => token.ValidTo;
 
-        public string Value => new JwtSecurityTokenHandler().WriteToken(token);
+        public string value => new JwtSecurityTokenHandler().WriteToken(this.token);
     }
 }
