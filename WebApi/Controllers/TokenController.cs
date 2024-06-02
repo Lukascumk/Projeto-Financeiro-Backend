@@ -16,7 +16,7 @@ namespace WebApi.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly string _securityKey = "your-very-secure-256-bit-secret-key-which-is-at-least-32-characters-long"; // Chave de 256 bits
+        private readonly string _securityKey = "your-very-secure-256-bit-secret-key-which-is-at-least-32-characters-long"; 
 
         public TokenController(UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager)
