@@ -22,4 +22,4 @@ O projeto utiliza várias tecnologias e conceitos avançados, incluindo:
 - **JWT (Json Web Token)**: Um padrão (RFC 7519) que define uma maneira compacta e independente de transmitir informações de forma segura entre as partes como um objeto JSON.
 - **Dependency Injection**: Um padrão de design que permite a remoção de hard-coded dependencies e torna possível alterá-las, seja em tempo de execução ou compilação.
 
-Esperamos que você encontre valor neste projeto e estamos ansiosos para ver como ele pode ajudar a melhorar a sua gestão financeira!
+
