@@ -16,7 +16,9 @@ namespace Entities.Entidades
         [ForeignKey("SistemaFinanceiro")]
         [Column(Order = 1)]
         public int IdSistema { get; set; }
-        public virtual SistemaFinanceiro SistemaFinanceiro { get; set; }
+       
+        
+        // public virtual SistemaFinanceiro SistemaFinanceiro { get; set; }
 
 
     }

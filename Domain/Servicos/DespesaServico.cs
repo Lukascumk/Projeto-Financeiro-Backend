@@ -2,6 +2,7 @@
 using Domain.Interfaces.IDespesa;
 using Domain.Interfaces.InterfaceServicos;
 using Entities.Entidades;
+using Entities.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,5 +47,34 @@ namespace Domain.Servicos
             if (valido)
                 await _InterfaceDespesa.Update(despesa);
         }
+
+        public async Task<object> CarregaGraficos(string emailUsuario)
+        {
+            var despesasUsuario = await _InterfaceDespesa.ListarDespesasUsuario(emailUsuario);
+            var despesasAnterior = await _InterfaceDespesa.ListarDespesasUsuarioNaoPagasMesesAnteriores(emailUsuario);
+           
+            var despesa_naoPagasMesAnterior = despesasAnterior.Any() ?
+                despesasAnterior.ToList().Sum(x=>x.Valor) : 0;
+           
+            var despesa_pagas = despesasUsuario.Where(d => d.Pago && d.TipoDespesa == Entities.Enums.EnumTipoDespesa.Contas)
+                .Sum(x => x.Valor);
+
+            var Despesa_pendentes = despesasUsuario.Where(d => !d.Pago && d.TipoDespesa == Entities.Enums.EnumTipoDespesa.Contas)
+                .Sum(x => x.Valor);
+
+            var ivestimentos = despesasUsuario.Where(d => d.TipoDespesa == Entities.Enums.EnumTipoDespesa.Investimento)
+                .Sum(x => x.Valor);
+
+            return new
+            {
+                sucesso = "OK",
+                despesa_pagas = despesa_pagas,
+                despesas_pendentes = Despesa_pendentes,
+                despesas_naoPagasMesAnteriores = despesa_naoPagasMesAnterior,
+                investimentos = ivestimentos
+
+            };
+        }
+
     }
 }
