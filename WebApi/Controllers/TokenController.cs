@@ -27,6 +27,7 @@ namespace WebApi.Controllers
 
         [AllowAnonymous]
         [Produces("application/json")]
+ 
         [HttpPost("/api/CreateToken")]
         public async Task<IActionResult> CreateToken([FromBody] InputModel Input)
         {
