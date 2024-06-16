@@ -21,5 +21,5 @@ O projeto utiliza várias tecnologias e conceitos avançados, incluindo:
 - **CORS (Cross-Origin Resource Sharing)**: Um mecanismo que permite muitos recursos (por exemplo, fontes, JavaScript) em uma página da web serem solicitados de outro domínio fora do domínio da qual a origem do recurso veio.
 - **JWT (Json Web Token)**: Um padrão (RFC 7519) que define uma maneira compacta e independente de transmitir informações de forma segura entre as partes como um objeto JSON.
 - **Dependency Injection**: Um padrão de design que permite a remoção de hard-coded dependencies e torna possível alterá-las, seja em tempo de execução ou compilação.
-
+- **Docekr Container: Criação de imagem docker.
 
