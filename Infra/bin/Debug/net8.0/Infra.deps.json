@@ -10,6 +10,7 @@
         "dependencies": {
           "Domain": "1.0.0",
           "Entities": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.5",
           "Microsoft.EntityFrameworkCore.Design": "8.0.5",
           "MySql.Data": "8.4.0",
           "MySql.EntityFrameworkCore": "8.0.2",
@@ -893,7 +894,8 @@
       },
       "Domain/1.0.0": {
         "dependencies": {
-          "Entities": "1.0.0"
+          "Entities": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.5"
         },
         "runtime": {
           "Domain.dll": {}

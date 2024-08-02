@@ -51,7 +51,7 @@ namespace WebApi.Controllers
                     .AddIssuer("Teste.Securiry.Bearer")
                     .AddAudience("Teste.Securiry.Bearer")
                     .AddClaim("UsuarioAPINumero", "1")
-                    .AddExpiry(30) // Expiração do token em 30 minutos
+                    .AddExpiry(30) // Expiração do token em 1 minuto
                     .Builder();
 
                 return Ok(new { token = token.value });

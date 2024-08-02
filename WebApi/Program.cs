@@ -18,9 +18,8 @@ using WebApi.Token;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Configure Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -85,18 +84,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
+// Configuração do CORS
 var devClient = "http://localhost:4200";
-
 app.UseCors(x =>
-x.AllowAnyOrigin()
-.AllowAnyMethod()
-.AllowAnyHeader()
-.WithOrigins(devClient));
-
+    x.WithOrigins(devClient)
+     .AllowAnyMethod()
+     .AllowAnyHeader());
 
 app.UseHttpsRedirection();
-
 app.UseAuthentication();
 app.UseAuthorization();
 
